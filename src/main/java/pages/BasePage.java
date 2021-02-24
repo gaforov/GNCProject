@@ -136,7 +136,7 @@ public class BasePage {
         int randomIndex = random.nextInt(selectionSize);
         System.out.println("randomIndex = " + randomIndex);
         select.selectByIndex(randomIndex);
-        waiting(2000);
+
     }
 
     // Whit this method I am able to select element from dropdown by the name
@@ -146,5 +146,6 @@ public class BasePage {
         select.selectByVisibleText(name);
 
     }
+
 
 }

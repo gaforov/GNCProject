@@ -4,14 +4,14 @@ public interface Page {
 
     // In this page I will declare all methods to be used in POM pages
 
-    void findElementAndClickFunction();
+    void findElementAndClickFunction(String element);
 
-    void findElementAndSendKeyFunction();
+    void findElementAndSendKeyFunction(String element, String text);
 
-    void selectFromDropDown();
+    void selectFromDropDown(String element);
 
+    void hoverOverTheElement(String element);
 
-
-
+    public void initMap();
 
 }
