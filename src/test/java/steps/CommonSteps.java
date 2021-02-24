@@ -45,6 +45,28 @@ public class CommonSteps extends BaseClass {
 
             getPage(page).selectFromDropDown(AllElementsInTheList.get(i));
 
+
         }
     }
+
+    @And("User scrolls down in {string}")
+    public void userScrollsDownIn(String page, DataTable dataTable ) {
+        List<String> AllElementsInTheList = dataTable.asList(String.class);
+
+        for (int i = 0; i < AllElementsInTheList.size(); i++) {
+
+            getPage(page).scrollToElement(AllElementsInTheList.get(i));
+
+        }
+    }
+
+    @And("User randomly click on products in {string}")
+    public void userRandomlyClickOnProductsIn(String page, DataTable dataTable) {
+        List<String> AllElementsInTheList = dataTable.asList(String.class);
+        for (int i = 0; i < AllElementsInTheList.size(); i++) {
+            getPage(page).randomClickOnElementInsideListOfWebElement(AllElementsInTheList.get(i));
+        }
+
+    }
+
 }

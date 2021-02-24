@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class MainPage extends BasePage implements Page {
 
@@ -20,6 +21,16 @@ public class MainPage extends BasePage implements Page {
     @Override
     public void initMap() {
         map.put("DepartmentsButton", DepartmentsButton);
+    }
+
+    @Override
+    public void scrollToElement(String element) {
+
+    }
+
+    @Override
+    public void randomClickOnElementInsideListOfWebElement(String ListOfWebElement) {
+
     }
 
     @Override

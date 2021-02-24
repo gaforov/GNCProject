@@ -1,5 +1,9 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+
 public interface Page {
 
     // In this page I will declare all methods to be used in POM pages
@@ -13,5 +17,9 @@ public interface Page {
     void hoverOverTheElement(String element);
 
     public void initMap();
+
+    public void scrollToElement(String element);
+
+    public void randomClickOnElementInsideListOfWebElement(String ListOfWebElement);
 
 }

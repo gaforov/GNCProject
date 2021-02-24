@@ -14,6 +14,7 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 public class BasePage {
@@ -37,6 +38,15 @@ public class BasePage {
             throw new RuntimeException("Element not found " + mapKey);
         }
         return map.get(mapKey);
+    }
+
+    // Getting webElement from the Map. To be used in the PageObjectClasses
+    public List<WebElement> getListOfWebElement(HashMap<String, List<WebElement>> listMap, String listMapKey){
+        if(!listMap.containsKey(listMapKey)){
+            throw new RuntimeException("List of Web Element not found " + listMapKey);
+
+        }
+        return listMap.get(listMapKey);
     }
 
     //    Click on element method
@@ -136,6 +146,7 @@ public class BasePage {
         int randomIndex = random.nextInt(selectionSize);
         System.out.println("randomIndex = " + randomIndex);
         select.selectByIndex(randomIndex);
+        waiting(1000);
 
     }
 
@@ -145,6 +156,12 @@ public class BasePage {
         Select select = new Select(element);
         select.selectByVisibleText(name);
 
+    }
+
+    public void clickOnRandomElementInTheList(List<WebElement> list){
+        Random random = new Random();
+        int randomIndex = random.nextInt(list.size());
+        list.get(randomIndex).click();
     }
 
 
