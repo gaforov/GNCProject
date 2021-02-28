@@ -146,7 +146,7 @@ public class BasePage {
         int randomIndex = random.nextInt(selectionSize);
         System.out.println("randomIndex = " + randomIndex);
         select.selectByIndex(randomIndex);
-        waiting(1000);
+        waiting(2000);
 
     }
 
