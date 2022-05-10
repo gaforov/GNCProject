@@ -43,7 +43,6 @@ public class SubCategoryPage extends BasePage implements Page {
 
     }
 
-
     public void initListMap() {
         listmap.put("ProductNameContainer", ProductNameContainer);
     }

@@ -20,7 +20,7 @@ public class BaseClass {
     private static List<Page> list = new ArrayList<>(); // here I am creating a list of class objects using interface Page
 
 
-    // With setUp method I am creating a Web-driver
+    // With setUp method I am creating a WebDriver
     public static WebDriver setUp(){
         if(threadDriver.get()==null){
             setWebDriver(DriverFactory.createInstance(browserName.get()));
@@ -33,7 +33,7 @@ public class BaseClass {
     }
 
 
-    // By tearDown method I am Quiting the driver
+    // By tearDown method I am quiting the driver
     public static void tearDown() {
 
         if (threadDriver.get() != null) {

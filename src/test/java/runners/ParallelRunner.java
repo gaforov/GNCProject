@@ -9,7 +9,7 @@ import utils.BaseClass;
 
 @CucumberOptions(
 
-        features = {"src/test/java/featureFiles/login/ManageBrand-Edit.feature"},
+        features = {"src/test/java/featureFiles/AddItemToCart.feature"},
         glue = {"steps"},
         dryRun = false,
         plugin = {"pretty", "html:target/report/index.html"}
