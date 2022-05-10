@@ -25,7 +25,6 @@ public class MainPage extends BasePage implements Page {
 
     @Override
     public void scrollToElement(String element) {
-
     }
 
     @Override
