@@ -164,5 +164,4 @@ public class BasePage {
         list.get(randomIndex).click();
     }
 
-
 }

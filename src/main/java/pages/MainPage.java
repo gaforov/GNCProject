@@ -10,6 +10,7 @@ import java.util.List;
 public class MainPage extends BasePage implements Page {
 
     private HashMap<String, WebElement> map = new HashMap<>();
+
     public MainPage() {
         PageFactory.initElements(driver, this);
         initMap();

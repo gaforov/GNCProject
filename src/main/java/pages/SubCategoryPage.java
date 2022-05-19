@@ -12,6 +12,7 @@ public class SubCategoryPage extends BasePage implements Page {
 
     private HashMap<String, WebElement> map = new HashMap<>();
     private HashMap<String, List<WebElement>> listmap = new HashMap<>();
+
     public SubCategoryPage() {
         PageFactory.initElements(driver, this);
         initMap();
